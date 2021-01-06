@@ -31,7 +31,7 @@ public class OrderService {
 		return list.stream().map(x -> new OrderDTO(x)).collect(Collectors.toList()); //Lambda expression
 	}
 	
-	@Transactional(readOnly=false)
+	@Transactional
 	public OrderDTO insert(OrderDTO dto){ //dto contains the order and its data
 		Order order = new Order(null, dto.getLatitude(), 
 				dto.getLongitude(), Instant.now(), dto.getAddress(), OrderStatus.PENDING);
@@ -39,6 +39,14 @@ public class OrderService {
 			Product product = productRepository.getOne(p.getId()); //Instance a new product based on p's ID
 			order.getProducts().add(product); //Add this new product on the order list, so now the product is associated to the order
 		}
+		order = repository.save(order);
+		return new OrderDTO(order);
+	}
+	
+	@Transactional
+	public OrderDTO setDelivered(Long id) {
+		Order order = repository.getOne(id);
+		order.setStatus(OrderStatus.DELIVERED);
 		order = repository.save(order);
 		return new OrderDTO(order);
 	}
