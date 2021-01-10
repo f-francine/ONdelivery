@@ -2,7 +2,7 @@
     background-color: var(--light-color);
   }
   
-  .orders-container h1 {
+  .orders-container h3 {
     margin: 0;
   }
   
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     background-color: #FFF;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .orders-steps-content {
@@ -23,7 +23,7 @@
     font-size: 25px;
     line-height: 33px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-right: 100px;
     margin-left: 160px;
   }
@@ -37,7 +37,7 @@
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.015em;
-    color: var(--secondary-color);
+    color: var(--dark-color);
   }
   
   .steps-items .steps-number {
@@ -46,24 +46,32 @@
     font-weight: bold;
     line-height: 33px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-right: 10px;
   }
   
-  .orders-list-container {
+  .products-list-container {
     display: flex;
     justify-content: center;
   }
+
+  .products-list-content {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+    width: 100%;
+  }
   
-  .orders-list-items {
-    width: 70%;
+  .products-list-items {
+    width: 80%;
+    padding-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 235px);
-    grid-gap: 20px 15px;
+    grid-gap: 10px 5px;
     justify-content: space-between;
   }
   
-  .order-card-container {
+  .product-card-container {
     background-color: #FFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -82,12 +90,12 @@
     transform: scale(1.01);
   }
   
-  .order-card-title {
+  .product-card-title {
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
   }
   
@@ -95,19 +103,19 @@
     color: #008E5B;
   }
   
-  .order-card-image {
+  .product-card-img {
     border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 100%;
   }
   
-  .order-card-price {
+  .product-card-price {
     font-weight: bold;
     font-size: 24px;
-    line-height: 33px;
+    line-height: 20px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: left;
   }
   
@@ -115,15 +123,18 @@
     color: #008E5B;
   }
   
-  .order-card-description {
+  .product-card-description {
     border-top: 1px solid #E6E6E6;
-    margin-top: 15px;
-    padding-top: 15px;
+    margin-top: 0px;
+    padding-top: 0px;
+
+    color: var(--dark-color);
+    font-size: 18px;
   }
   
   .order-card-description h3 {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 16px;
     letter-spacing: -0.015em;
     color: var(--secondary-color);
   }
